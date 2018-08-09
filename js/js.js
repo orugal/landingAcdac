@@ -95,6 +95,11 @@ var landing =
 				        			$("#formPago").submit();
 								},1000);
 				        	}
+				        	else
+				        	{
+
+								landing.alerta("Atención",data.mensaje,function(){},'info');
+				        	}
 				        },
 				        error:function(e) {
 				            //$("#ERRORES").html(e.statusText + e.status + e.responseText);

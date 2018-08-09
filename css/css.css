@@ -1,15 +1,15 @@
 body{
-	background:#002353 ;
-	color:#fff;
-}
-.central{
-	padding:5% 0 5% 0;
-	background: url(../images/fondo.jpg)  no-repeat ;
+	background:#002353 url(../images/fondo.jpg)  no-repeat ;
 	background-position: center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover
+	background-size: cover;
+	color:#fff;
+	font-size:1.74em;
+}
+.central{
+	padding:5% 0 5% 0;
 }
 .interno{
 	/*padding: 5%*/
@@ -20,5 +20,19 @@ body{
 .subTexto{
 	font-size: 1.3em
 }
-.btn-envia{background: #F8931F;width: 100%;color:#ff;font-weight: bold;font-size: 1.2em;border-radius: 0;}
+.btn-envia{background: #F8931F;width: 100%;color:#fff;font-weight: bold;font-size: 1.2em;border-radius: 0;}
 .cajas{border-radius: 0 !important}
+ #rc-imageselect, .g-recaptcha{transform:scale(0.78);-webkit-transform:scale(0.78);transform-origin:0 0;-webkit-transform-origin:0 0;} 
+
+@media only screen and (max-width:768px)
+{ 
+	#rc-imageselect, .g-recaptcha{transform:scale(0.94);-webkit-transform:scale(0.94);transform-origin:0 0;-webkit-transform-origin:0 0;margin:0 0 5% 2%} 
+	.titulo1{padding: 0;margin: 0;font-size:1.5em;text-align: center;}
+	.titulo2{padding: 0;margin: 0;font-size:2.0em;text-align: center;}
+	.central{
+		padding:5%;
+	}
+	.cajas{border-radius: 0 !important;padding: 8%}
+	.texto{margin:0 0 10% 0;}
+	.btn-envia{background: #F8931F;width: 100%;color:#fff;font-weight: bold;font-size: 1.2em;border-radius: 0;padding: 8%}
+}

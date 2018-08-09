@@ -16,6 +16,7 @@ session_start();
 
 	<link rel="stylesheet" type="text/css" href="css/css.css">
 	<link rel="stylesheet" type="text/css" href="css/sweetalert.min.css">
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 
@@ -26,13 +27,16 @@ session_start();
 				<div class="col col-lg-8">
 						<div class="row">
 
-							<div class="col col-lg-12">
+							<div class="col col-lg-12 visible-lg visible-md">
 								<img src="images/logo.png" width="30%"><br><br><br><br>
+							</div>
+							<div class="col col-lg-12 visible-xs visible-sm">
+								<center><img src="images/logo.png" width="80%"><br><br></center>
 							</div>
 							<div class="col col-lg-8">
 								<h1 class="titulo1">Por nuestro juramento</h1>
-								<h2 class="titulo2">Nadie queda atrás.</h2><br>
-								<p>
+								<h2 class="titulo2">Nadie queda atrás.</h2><br><br>
+								<p class="text-justify texto">
 									<span class="subTexto">Con tu aporte lograremos que nuestros aviadores colombianos fortalezcan las alas de sus derechos.</span><br><br>
 
 									Gracias a tu donación, brindaremos alivio y bienestar a los Pilotos y Copilotos Colombianos, quienes fueron injustamente despedidos tras ejercer su derecho a la huelga, siendo esta la más larga en la historia de la aviación mundial.<br><br>
@@ -73,8 +77,8 @@ session_start();
 									 <!-- apikey : 6benk3fl6ea8v6h8cgiiobhid9-->
 
 									 <!-- para PAYU -->
-									  <input name="merchantId" id="merchantId"    type="hidden"  value="504715">
-									  <input name="accountId"     type="hidden"  value="505675" >
+									  <input name="merchantId" id="merchantId"    type="hidden"  value="<?php echo _MERCHANT_ID?>">
+									  <input name="accountId"     type="hidden"  value="<?php echo _ACCOUNT_ID ?>" >
 									  <input name="description"   type="hidden"  value="Donación"  >
 									  <input name="referenceCode" id="referenceCode" type="hidden"  value="<?php echo _REFERENCE ?>" >
 									  <!--<input name="amount"        type="hidden"  value="20000"   >-->
@@ -86,7 +90,7 @@ session_start();
 									  <!-- <input name="buyerEmail"    type="hidden"  value="test@test.com" > -->
 									  <input name="responseUrl"    type="hidden"  value="<?php echo _LINK_RESP ?>" >
 									  <input name="confirmationUrl"    type="hidden"  value="<?php echo _LINK_CONFIRM ?>" >
-
+									  <center><div class="g-recaptcha" data-sitekey="6LfQ5WcUAAAAANYXMCxCBjE7q7PlnN5M220M2wtu"></div></center>
 									  <button type="button" onclick="landing.sendForm();" class="btn btn-envia">HAZ TU DONACIÓN</button>
 								</form>
 							</div>
